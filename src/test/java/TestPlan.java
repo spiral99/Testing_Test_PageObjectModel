@@ -13,8 +13,7 @@ public class TestPlan {
     @BeforeSuite
     public static void main(String[] args) {
         // ChromeDriver location set up in Utils class
-        // System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
-        WebDriverManager.chromedriver().driverVersion("90.0.4430.85").setup();
+        System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
     @Test(testName = "Submit a WebForm")
