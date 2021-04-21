@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
@@ -12,7 +13,8 @@ public class TestPlan {
     @BeforeSuite
     public static void main(String[] args) {
         // ChromeDriver location set up in Utils class
-        System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
+        // System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
+        WebDriverManager.chromedriver().driverVersion("90.0.4430.85").setup();
     }
 
     @Test(testName = "Submit a WebForm")
